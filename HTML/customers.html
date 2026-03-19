@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvenTrack | Customers</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hanuman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-card">
+                    <img src="/Image/My Pf.jpg">
+                    <h2>THOEURN SEYHAT</h2>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>ផ្ទាំងគ្រប់គ្រង <span>Dashboard</span></span>
+                </a>
+
+                <!-- Product Menu -->
+                <div class="nav-group">
+                    <button class="nav-item">
+                        <i class="fas fa-box-archive"></i>
+                        <span>ទំនិញ <span>Products</span></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="submenu">
+                        <a href="products-add.html" class="submenu-item">បន្ថែមទំនិញ (Add)</a>
+                        <a href="products-list.html" class="submenu-item">បញ្ជីទំនិញ (List)</a>
+                    </div>
+                </div>
+
+                <!-- Categories Menu -->
+                <div class="nav-group">
+                    <button class="nav-item">
+                        <i class="fas fa-layer-group"></i>
+                        <span>ប្រភេទ <span>Categories</span></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="submenu">
+                        <a href="categories-add.html" class="submenu-item">បន្ថែមប្រភេទ (Add)</a>
+                        <a href="categories-list.html" class="submenu-item">បញ្ជីប្រភេទ (List)</a>
+                    </div>
+                </div>
+
+                <!-- Order Menu -->
+                <div class="nav-group">
+                    <button class="nav-item">
+                        <i class="fas fa-cart-shopping"></i>
+                        <span>ការកម្ម៉ង់ <span>Orders</span></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="submenu">
+                        <a href="orders-add.html" class="submenu-item">បន្ថែមការកម្ម៉ង់ (Add)</a>
+                        <a href="orders-list.html" class="submenu-item">បញ្ជីការកម្ម៉ង់ (List)</a>
+                    </div>
+                </div>
+
+                <!-- User Menu -->
+                <div class="nav-group">
+                    <button class="nav-item open">
+                        <i class="fas fa-user-group"></i>
+                        <span>អ្នកប្រើប្រាស់ <span>Users</span></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="submenu">
+                        <a href="users-add.html" class="submenu-item">បន្ថែមអ្នកប្រើ (Add)</a>
+                        <a href="users-list.html" class="submenu-item">បញ្ជីអ្នកប្រើ (List)</a>
+                    </div>
+                </div>
+
+                <a href="settings.html" class="nav-item">
+                    <i class="fas fa-sliders"></i>
+                    <span>ការកំណត់ <span>Settings</span></span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">AD</div>
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>ការគ្រប់គ្រងព័ត៌មានអតិថិជន</h1>
+                <p>Track customer details and purchase history.</p>
+            </header>
+
+            <!-- Customer Form -->
+            <section class="card">
+                <div class="card-header">
+                    <h3 id="formTitle"><i class="fas fa-user-plus"></i> បញ្ចូលអតិថិជនថ្មី <span>New Customer
+                            Profile</span></h3>
+                </div>
+                <div class="form-grid">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>ឈ្មោះអតិថិជន <span>Customer Name</span></label>
+                            <input type="text" id="custName" placeholder="Full Name...">
+                        </div>
+                        <div class="form-group">
+                            <label>លេខទូរស័ព្ទ <span>Phone Number</span></label>
+                            <input type="text" id="custPhone" placeholder="012 345 678">
+                        </div>
+                        <div class="form-group">
+                            <label>អ៊ីមែល <span>Email (Optional)</span></label>
+                            <input type="email" id="custEmail" placeholder="example@mail.com">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button id="submitCust" class="btn-primary">រក្សាទុកព័ត៌មាន (Save Customer)</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Table -->
+            <section class="card table-section">
+                <div class="table-header">
+                    <h3><i class="fas fa-users-rectangle"></i> បញ្ជីឈ្មោះអតិថិជន <span>Customer Directory</span></h3>
+                    <div class="search-box" style="position: relative;">
+                        <input onkeyup="searchCustomer(this.value)" type="text"
+                            placeholder="ស្វែងរកតាមឈ្មោះ/លេខទូរស័ព្ទ..." style="padding-left: 35px;">
+                        <i class="fas fa-search"
+                            style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></i>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>ឈ្មោះអតិថិជន</th>
+                                <th>លេខទូរស័ព្ទ</th>
+                                <th>អ៊ីមែល</th>
+                                <th>សកម្មភាព</th>
+                            </tr>
+                        </thead>
+                        <tbody id="custBody">
+                            <!-- Customer Data -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../JS/customers.js"></script>
+</body>
+
+</html>

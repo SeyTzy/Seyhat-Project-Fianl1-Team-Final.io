@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvenTrack | Categories</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hanuman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-card">
+                    <img src="/Image/My Pf.jpg">
+                    <h2>THOEURN SEYHAT</h2>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>ផ្ទាំងគ្រប់គ្រង <span>Dashboard</span></span>
+                </a>
+
+                <!-- Product Menu -->
+                <div class="nav-group">
+                    <button class="nav-item">
+                        <i class="fas fa-box-archive"></i>
+                        <span>ទំនិញ <span>Products</span></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="submenu">
+                        <a href="products-add.html" class="submenu-item">បន្ថែមទំនិញ (Add)</a>
+                        <a href="products-list.html" class="submenu-item">បញ្ជីទំនិញ (List)</a>
+                    </div>
+                </div>
+
+                <!-- Categories Menu -->
+                <div class="nav-group">
+                    <button class="nav-item open">
+                        <i class="fas fa-layer-group"></i>
+                        <span>ប្រភេទ <span>Categories</span></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="submenu">
+                        <a href="categories-add.html" class="submenu-item">បន្ថែមប្រភេទ (Add)</a>
+                        <a href="categories-list.html" class="submenu-item">បញ្ជីប្រភេទ (List)</a>
+                    </div>
+                </div>
+
+                <!-- Order Menu -->
+                <div class="nav-group">
+                    <button class="nav-item">
+                        <i class="fas fa-cart-shopping"></i>
+                        <span>ការកម្ម៉ង់ <span>Orders</span></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="submenu">
+                        <a href="orders-add.html" class="submenu-item">បន្ថែមការកម្ម៉ង់ (Add)</a>
+                        <a href="orders-list.html" class="submenu-item">បញ្ជីការកម្ម៉ង់ (List)</a>
+                    </div>
+                </div>
+
+                <!-- User Menu -->
+                <div class="nav-group">
+                    <button class="nav-item">
+                        <i class="fas fa-user-group"></i>
+                        <span>អ្នកប្រើប្រាស់ <span>Users</span></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="submenu">
+                        <a href="users-add.html" class="submenu-item">បន្ថែមអ្នកប្រើ (Add)</a>
+                        <a href="users-list.html" class="submenu-item">បញ្ជីអ្នកប្រើ (List)</a>
+                    </div>
+                </div>
+
+                <a href="settings.html" class="nav-item">
+                    <i class="fas fa-sliders"></i>
+                    <span>ការកំណត់ <span>Settings</span></span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">AD</div>
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>ការគ្រប់គ្រងប្រភេទទំនិញ</h1>
+                <p>Categorized analytics and inventory breakdown.</p>
+            </header>
+
+            <!-- Stats Grid -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fas fa-tags"></i></div>
+                    <div class="stat-data">
+                        <span class="stat-label">សរុបប្រភេទ (Categories)</span>
+                        <h2 id="statTotalCategories">0</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="fas fa-boxes-stacked"></i></div>
+                    <div class="stat-data">
+                        <span class="stat-label">ទំនិញសរុប (Total Items)</span>
+                        <h2 id="statTotalItems">0</h2>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories Table Section -->
+            <section class="card table-section">
+                <div class="table-header">
+                    <h3><i class="fas fa-chart-pie"></i> សេចក្តីសង្ខេបតាមប្រភេទ <span>Category Summary</span></h3>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>ឈ្មោះប្រភេទ (Category Name)</th>
+                                <th>ចំនួនទំនិញ (Item Qty)</th>
+                                <th>តម្លៃសរុប (Total Value)</th>
+                                <th>សកម្មភាព (Actions)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="categoryBody">
+                            <!-- Category Data -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../JS/categories.js"></script>
+</body>
+
+</html>
